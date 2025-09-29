@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from heatmap.views import trade_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("trades/", trade_list, name="trade_list")
 ]
