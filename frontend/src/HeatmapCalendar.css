@@ -1,0 +1,86 @@
+.calendar-wrapper {
+  max-width: 420px;
+  margin: 2rem auto;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.day-header {
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.day-box {
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.day-box:hover {
+  transform: scale(1.05);
+}
+
+/* PnL percentage-based coloring */
+.big-gain {
+  background-color: #2e7d32; /* darker green */
+  color: white;
+}
+
+.medium-gain {
+  background-color: #81c784; /* lighter green */
+  color: black;
+}
+
+.medium-loss {
+  background-color: #e57373; /* lighter red */
+  color: black;
+}
+
+.big-loss {
+  background-color: #c62828; /* darker red */
+  color: white;
+}
+
+.no-trade {
+  background-color: white;   /* empty trading day */
+  border: 1.5px solid #d4d6d4;
+  color: black;
+}
+
+.non-trading {
+  background-color: #d4d6d4; /* gray for closed market */
+  color: #777;
+}
+
+.day-box.empty {
+  background-color: transparent;
+  border: none;
+  cursor: default;
+}
+
+.day-number {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.day-pct {
+  font-size: 0.75rem;
+  margin-top: 4px;
+  opacity: 0.8;
+}
