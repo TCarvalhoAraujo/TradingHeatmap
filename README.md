@@ -11,11 +11,17 @@ The goal is to make trade tracking simple, organized, and useful for later revie
 - **File upload per trade** (e.g., broker contract notes, reports, or receipts).  
 - **Organized storage of uploaded files** to simplify tax filing later.  
 
-## Running on Dev
+## Running the Project
+
+
+### Backend
 
 1. Create & Activate Virtual Environment
 
 ```shell
+# Move to backend folder
+cd backend
+
 # Create virtual environment
 python -m venv venv
 
@@ -43,4 +49,19 @@ python manage.py migrate
 
 ```shell
 python manage.py runserver
+```
+
+### Frontend
+
+1. Install npm dependencies
+
+```shell
+cd frontend
+npm install
+```
+
+2. Start web server
+
+```shell
+npm start
 ```
