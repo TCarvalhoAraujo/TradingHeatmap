@@ -1,8 +1,6 @@
-.calendar-wrapper {
-  max-width: 420px;
-  margin: 2rem auto;
-}
-
+/* ================================
+   Calendar Grid
+=================================== */
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -18,6 +16,9 @@
   font-size: 0.85rem;
 }
 
+/* ================================
+   Calendar Day Boxes
+=================================== */
 .day-box {
   aspect-ratio: 1 / 1;
   text-align: center;
@@ -26,45 +27,47 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: bold;
-  transition: transform 0.1s ease, background-color 0.2s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: transform 0.1s ease, background-color 0.2s ease;
 }
 
 .day-box:hover {
   transform: scale(1.05);
 }
 
-/* PnL percentage-based coloring */
+/* ================================
+   Coloring by PnL %
+=================================== */
 .big-gain {
-  background-color: #2e7d32; /* darker green */
+  background-color: #2e7d32; /* dark green */
   color: white;
 }
 
 .medium-gain {
-  background-color: #81c784; /* lighter green */
+  background-color: #81c784; /* light green */
   color: black;
 }
 
 .medium-loss {
-  background-color: #e57373; /* lighter red */
+  background-color: #e57373; /* light red */
   color: black;
 }
 
 .big-loss {
-  background-color: #c62828; /* darker red */
+  background-color: #c62828; /* dark red */
   color: white;
 }
 
 .no-trade {
-  background-color: white;   /* empty trading day */
+  background-color: white;   /* trading day but no PnL */
   border: 1.5px solid #d4d6d4;
   color: black;
 }
 
 .non-trading {
-  background-color: #d4d6d4; /* gray for closed market */
+  background-color: #d4d6d4; /* market closed */
   color: #777;
 }
 
@@ -74,6 +77,9 @@
   cursor: default;
 }
 
+/* ================================
+   Day Content
+=================================== */
 .day-number {
   font-weight: bold;
   font-size: 0.9rem;

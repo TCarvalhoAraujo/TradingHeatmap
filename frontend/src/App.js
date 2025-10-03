@@ -1,10 +1,9 @@
-import HeatmapCalendar from "./HeatmapCalendar";
-import TradeList from "./TradeList";
+import CalendarHeatmapWrapper from "./components/CalendarHeatmapWrapper";
 
 function App() {
   return (
     <div>
-      <HeatmapCalendar />
+      <CalendarHeatmapWrapper />
     </div>
   );
 }

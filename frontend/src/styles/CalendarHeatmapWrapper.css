@@ -1,0 +1,50 @@
+/* ================================
+   Layout Wrappers
+=================================== */
+.heatmap-container {
+  display: flex;
+  align-items: flex-start; /* top-align content */
+  gap: 2rem; /* spacing between calendar and right panel */
+  padding: 2rem;
+}
+
+.calendar-section {
+  max-width: 420px;
+  flex-shrink: 0; /* don’t allow shrinking */
+}
+
+.right-panel {
+  flex: 1; /* fill remaining space */
+  min-width: 250px;
+}
+
+/* ================================
+   Calendar Header
+=================================== */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.performance-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.performance-positive {
+  background-color: #2e7d32; /* dark green */
+  color: white;
+}
+
+.performance-negative {
+  background-color: #c62828; /* dark red */
+  color: white;
+}

@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from "react";
-import "./HeatmapCalendar.css";
+// Calendar.js
+import React from "react";
+import "../styles/Calendar.css";
 
 function parseYMD(iso) {
   const [y, m, d] = iso.split("-").map(Number);
   return new Date(y, m - 1, d);
 }
 
-const HeatmapCalendar = () => {
-  const [days, setDays] = useState([]);
-
-  useEffect(() => {
-    fetch("/api/heatmap/")
-      .then((res) => res.json())
-      .then((data) => setDays(data.days || []))
-      .catch((err) => console.error("Failed to load calendar", err));
-  }, []);
-
+const Calendar = ({ days }) => {
   const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const firstWeekdayIndex = days.length ? parseYMD(days[0].date).getDay() : 0;
   const emptyBoxes = Array(firstWeekdayIndex).fill(null);
@@ -77,4 +69,4 @@ const HeatmapCalendar = () => {
   );
 };
 
-export default HeatmapCalendar;
+export default Calendar;
